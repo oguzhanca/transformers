@@ -348,6 +348,7 @@ _import_structure = {
     "models.vision_text_dual_encoder": ["VisionTextDualEncoderConfig", "VisionTextDualEncoderProcessor"],
     "models.visual_bert": ["VISUAL_BERT_PRETRAINED_CONFIG_ARCHIVE_MAP", "VisualBertConfig"],
     "models.vit": ["VIT_PRETRAINED_CONFIG_ARCHIVE_MAP", "ViTConfig"],
+    "models.unetr": ["UNETR_PRETRAINED_CONFIG_ARCHIVE_MAP", "UnetrConfig"],
     "models.vit_mae": ["VIT_MAE_PRETRAINED_CONFIG_ARCHIVE_MAP", "ViTMAEConfig"],
     "models.wav2vec2": [
         "WAV_2_VEC_2_PRETRAINED_CONFIG_ARCHIVE_MAP",
@@ -1875,6 +1876,15 @@ else:
             "ViTPreTrainedModel",
         ]
     )
+    _import_structure["models.unetr"].extend(
+        [
+            "UNETR_PRETRAINED_MODEL_ARCHIVE_LIST",
+            "UnetrForImageClassification",
+            "UnetrForMaskedImageModeling",
+            "UnetrModel",
+            "UnetrPreTrainedModel",
+        ]
+    )
     _import_structure["models.vit_mae"].extend(
         [
             "VIT_MAE_PRETRAINED_MODEL_ARCHIVE_LIST",
@@ -3131,6 +3141,7 @@ if TYPE_CHECKING:
     from .models.vision_text_dual_encoder import VisionTextDualEncoderConfig, VisionTextDualEncoderProcessor
     from .models.visual_bert import VISUAL_BERT_PRETRAINED_CONFIG_ARCHIVE_MAP, VisualBertConfig
     from .models.vit import VIT_PRETRAINED_CONFIG_ARCHIVE_MAP, ViTConfig
+    from .models.unetr import UNETR_PRETRAINED_CONFIG_ARCHIVE_MAP, UnetrConfig
     from .models.vit_mae import VIT_MAE_PRETRAINED_CONFIG_ARCHIVE_MAP, ViTMAEConfig
     from .models.wav2vec2 import (
         WAV_2_VEC_2_PRETRAINED_CONFIG_ARCHIVE_MAP,
@@ -4405,6 +4416,13 @@ if TYPE_CHECKING:
             ViTForMaskedImageModeling,
             ViTModel,
             ViTPreTrainedModel,
+        )
+        from .models.unetr import (
+            UNETR_PRETRAINED_MODEL_ARCHIVE_LIST,
+            UnetrForImageClassification,
+            UnetrForMaskedImageModeling,
+            UnetrModel,
+            UnetrPreTrainedModel,
         )
         from .models.vit_mae import (
             VIT_MAE_PRETRAINED_MODEL_ARCHIVE_LIST,

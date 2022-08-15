@@ -144,6 +144,7 @@ from . import (
     vision_text_dual_encoder,
     visual_bert,
     vit,
+    unetr,
     vit_mae,
     wav2vec2,
     wav2vec2_conformer,
